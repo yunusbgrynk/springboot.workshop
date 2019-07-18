@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "history_of_entityII")
-public class EntityIIHistory {
+public class EntityIIDetail {
 
   private Long id;
   private EntityII entityII;
@@ -16,11 +16,11 @@ public class EntityIIHistory {
   private String detail;
   private User user;
 
-  public EntityIIHistory() {
+  public EntityIIDetail() {
 
   }
 
-  public EntityIIHistory(Long id, String description, Date date, Options options, String detail) {
+  public EntityIIDetail(Long id, String description, Date date, Options options, String detail) {
     this.id = id;
     this.description = description;
     this.date = date;
@@ -104,7 +104,7 @@ public class EntityIIHistory {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    EntityIIHistory that = (EntityIIHistory) o;
+    EntityIIDetail that = (EntityIIDetail) o;
     return Objects.equals(id, that.id) &&
         Objects.equals(description, that.description) &&
         Objects.equals(date, that.date) &&
