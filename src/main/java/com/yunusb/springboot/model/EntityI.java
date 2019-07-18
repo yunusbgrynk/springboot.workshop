@@ -3,6 +3,7 @@ package com.yunusb.springboot.model;
 import javax.persistence.*;
 import java.util.Objects;
 
+//Data model
 @Entity
 @Table(name = "entity_1")
 public class EntityI extends BaseEntity {
