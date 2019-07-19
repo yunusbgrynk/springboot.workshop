@@ -11,7 +11,7 @@ public class EntityI extends BaseEntity {
   private Long id;
   private String ent1name;
   private String ent1code;
-  private User aheaedUser;
+  private User aheadUser;
 
   public EntityI (){
 
@@ -56,11 +56,11 @@ public class EntityI extends BaseEntity {
   @JoinColumn(name = "ahead_user_id")
   @ManyToOne(optional = true , fetch = FetchType.LAZY)
   public User getAheaedUser() {
-    return aheaedUser;
+    return aheadUser;
   }
 
   public void setAheaedUser(User aheaedUser) {
-    this.aheaedUser = aheaedUser;
+    this.aheadUser = aheaedUser;
   }
 
   @Override
