@@ -25,6 +25,7 @@ public class EntityIController {
     this.entityIService = entityIService;
   }
 
+  //PaginationMod<T>: create response object for pagination
   @GetMapping("/pagination")
   public ResponseEntity<PaginationMod<EntityIDto>> getAllPageable(Pageable pageable){
     PaginationMod<EntityIDto> pages = entityIService.getAllPageable(pageable);

@@ -15,5 +15,6 @@ public interface EntityIService {
   List<EntityI> getByEnt1codeContains(String ent1code);
   Boolean delete(Long id);
   PaginationMod<EntityIDto> getAllPageable(Pageable pageable);
+  EntityIDto update(Long id, EntityIDto entityIDto);
 
 }

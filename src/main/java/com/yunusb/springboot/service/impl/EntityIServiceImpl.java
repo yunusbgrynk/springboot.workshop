@@ -74,4 +74,14 @@ public class EntityIServiceImpl implements EntityIService {
     paginationMod.setValue(pagesOfentityI, Arrays.asList(entityIDtos));
     return paginationMod;
   }
+
+  @Override
+  public EntityIDto update(Long id, EntityIDto entityIDto) {
+    EntityI entityI =entityIRepository.getOne(id);
+    if (entityI == null){
+      throw new IllegalArgumentException("Not found updated entity1");
+    }
+    EntityI entityI1Control = entityIRepository.getByEnt1codeAndIdNot(entityIDto.getEnt1code(), id);
+    return null;
+  }
 }
