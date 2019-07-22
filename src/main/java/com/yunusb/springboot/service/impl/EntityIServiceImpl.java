@@ -5,8 +5,10 @@ import com.yunusb.springboot.model.EntityI;
 import com.yunusb.springboot.repository.EntityIRepository;
 import com.yunusb.springboot.repository.UserRepository;
 import com.yunusb.springboot.service.EntityIService;
+import com.yunusb.springboot.util.PaginationMod;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -53,6 +55,17 @@ public class EntityIServiceImpl implements EntityIService {
 
   @Override
   public List<EntityI> getByEnt1codeContains(String ent1code) {
+    return null;
+  }
+
+  @Override
+  public Boolean delete(Long id) {
+    entityIRepository.deleteById(id);
+    return true;
+  }
+
+  @Override
+  public PaginationMod<EntityIDto> getAllPageable(Pageable pageable) {
     return null;
   }
 }

@@ -32,8 +32,15 @@ public class EntityIController {
  // @GetMapping("/{id}")
   @RequestMapping(value = "/getEntityI/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<EntityIDto> getById(@PathVariable(value = "id",required = true) Long id){
+    log.info("Initializing entityIServiceImpl :"+EntityIServiceImpl.class);
     EntityIDto entityIDto = entityIService.getById(id);
     return ResponseEntity.ok(entityIDto);
+  }
+
+  @DeleteMapping("/{id}")
+  public ResponseEntity<Boolean> delete(@PathVariable(value = "id",required = true) Long id){
+    log.info("Deleting this id : "+id);
+    return ResponseEntity.ok(entityIService.delete(id));
   }
 
 }
