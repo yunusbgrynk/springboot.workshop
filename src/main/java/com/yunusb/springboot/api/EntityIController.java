@@ -3,8 +3,10 @@ package com.yunusb.springboot.api;
 import com.yunusb.springboot.dto.EntityIDto;
 import com.yunusb.springboot.service.impl.EntityIServiceImpl;
 import com.yunusb.springboot.util.ApiPaths;
+import com.yunusb.springboot.util.PaginationMod;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +23,12 @@ public class EntityIController {
   @Autowired
   public EntityIController(EntityIServiceImpl entityIService) {
     this.entityIService = entityIService;
+  }
+
+  @GetMapping("/pagination")
+  public ResponseEntity<PaginationMod<EntityIDto>> getAllPageable(Pageable pageable){
+    PaginationMod<EntityIDto> pages = entityIService.getAllPageable(pageable);
+    return ResponseEntity.ok(pages);
   }
 
  // @PostMapping
