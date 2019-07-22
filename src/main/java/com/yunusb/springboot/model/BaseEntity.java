@@ -24,7 +24,7 @@ public abstract class BaseEntity extends AbstractEntity {
   private Date updatedAt;
   @LastModifiedBy
   private String updeatedBy;
-  private boolean status;
+  private Boolean status;
 
   @Basic
   @Column(name = "created_at" , updatable = false)
@@ -68,12 +68,11 @@ public abstract class BaseEntity extends AbstractEntity {
 
   @Basic
   @Column(name = "status")
-  public boolean isStatus() {
+  public Boolean getStatus() {
     return status;
   }
 
-  public void setStatus(boolean status) {
+  public void setStatus(Boolean status) {
     this.status = status;
   }
-
 }
