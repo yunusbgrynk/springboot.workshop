@@ -6,14 +6,15 @@ import org.springframework.data.domain.Sort;
 import java.util.List;
 
 public class PaginationMod<T> {
-
+  // page module to talk with service that we create
   private int number;
   private int size;
   private Sort sort;
   private int totalPages;
   private Long totalElements;
   private List<T> content;
-
+  // calling the setvalue method creates an instance of the paginationModule object
+  // filled our own object through Spring's Page
   public void setValue(Page page, List<T> list){
     this.number = page.getNumber();
     this.size = page.getSize();

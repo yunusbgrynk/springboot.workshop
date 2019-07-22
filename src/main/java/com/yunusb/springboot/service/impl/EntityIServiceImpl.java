@@ -8,9 +8,11 @@ import com.yunusb.springboot.service.EntityIService;
 import com.yunusb.springboot.util.PaginationMod;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -66,6 +68,10 @@ public class EntityIServiceImpl implements EntityIService {
 
   @Override
   public PaginationMod<EntityIDto> getAllPageable(Pageable pageable) {
-    return null;
+    Page<EntityI> pagesOfentityI = entityIRepository.findAll(pageable);
+    PaginationMod paginationMod = new PaginationMod<EntityIDto>(); //response of Pagination request
+    EntityIDto[] entityIDtos = modelMapper.map(pagesOfentityI.getContent(),EntityIDto[].class);
+    paginationMod.setValue(pagesOfentityI, Arrays.asList(entityIDtos));
+    return paginationMod;
   }
 }
