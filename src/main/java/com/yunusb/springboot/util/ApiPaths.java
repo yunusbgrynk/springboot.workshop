@@ -1,6 +1,6 @@
 package com.yunusb.springboot.util;
 
-public class ApiPaths {
+public final class ApiPaths {
 
   private static final String BASE_PATH="/api";
 
