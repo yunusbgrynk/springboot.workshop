@@ -52,7 +52,8 @@ public class EntityIServiceImpl implements EntityIService {
 
   @Override
   public EntityIDto getByEnt1code(String ent1code) {
-    return null;
+    EntityI getByCodeEntity = entityIRepository.getByEnt1code(ent1code);
+    return modelMapper.map(getByCodeEntity, EntityIDto.class);
   }
 
   @Override
@@ -82,6 +83,12 @@ public class EntityIServiceImpl implements EntityIService {
       throw new IllegalArgumentException("Not found updated entity1");
     }
     EntityI entityI1Control = entityIRepository.getByEnt1codeAndIdNot(entityIDto.getEnt1code(), id);
-    return null;
+    if(entityI1Control != null){
+      throw new IllegalArgumentException("This entity code already exist");
+    }
+    entityI.setEnt1code(entityIDto.getEnt1code());
+    entityI.setEnt1name(entityIDto.getEnt1name());
+    entityIRepository.save(entityI);
+    return modelMapper.map(entityI, EntityIDto.class);
   }
 }

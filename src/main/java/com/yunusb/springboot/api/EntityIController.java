@@ -52,4 +52,11 @@ public class EntityIController {
     return ResponseEntity.ok(entityIService.delete(id));
   }
 
+  @PutMapping("/{id}")
+  public ResponseEntity<EntityIDto> updateEntityI(@PathVariable(value = "id",required = true) Long id, @RequestBody EntityIDto entityIDto){
+    return  ResponseEntity.ok(entityIService.update(id, entityIDto));
+  }
+
+
+
 }
