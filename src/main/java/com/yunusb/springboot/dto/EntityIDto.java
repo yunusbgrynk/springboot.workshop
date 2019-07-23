@@ -1,9 +1,18 @@
 package com.yunusb.springboot.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "EntityI Data Transfer Object")
 public class EntityIDto {
 
+  @ApiModelProperty(value = "EntityI ID")
   private Long id;
+
+  @ApiModelProperty(value = "EntityI Name")
   private String ent1name;
+
+  @ApiModelProperty(value = "EntityI Code")
   private String ent1code;
 
 
