@@ -8,6 +8,7 @@ import java.util.Objects;
 @Table(name = "users", indexes = {@Index(name = "idx_username", columnList = "username")})
 public class User extends BaseEntity {
 
+  
   private Long id;
   private String firstName;
   private String lastName;
