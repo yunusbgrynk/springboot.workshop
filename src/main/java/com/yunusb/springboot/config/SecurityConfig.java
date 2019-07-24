@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     auth.userDetailsService(userDetailsService).passwordEncoder(encoder());
   }
 
-  @Bean
+  @Bean // blocks every request from the application
   public JwtAuthenticationFilter authenticationTokenFilterBean() throws Exception {
     return new JwtAuthenticationFilter();
   }
@@ -61,4 +61,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     return new BCryptPasswordEncoder();
   }
 
-}
+  }
