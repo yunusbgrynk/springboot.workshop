@@ -1,9 +1,16 @@
 package com.yunusb.springboot.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "User DTO")
 public class UserDto {
 
+  @ApiModelProperty(required = true,value = "ID")
   private Long id;
+  @ApiModelProperty(required = true,value = "Name Surname")
   private String nameSurname;
+  @ApiModelProperty(required = true,value = "Email")
   private String email;
 
   public Long getId() {

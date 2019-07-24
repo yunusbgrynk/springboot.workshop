@@ -1,17 +1,27 @@
 package com.yunusb.springboot.dto;
 
 import com.yunusb.springboot.model.Options;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 
+@ApiModel(value = "EntityII Details")
 public class EntityIIDetailDto {
 
+  @ApiModelProperty(required = true,value = "ID")
   private Long id;
-  private EntityIIDto entityIIDto;
+  @ApiModelProperty(required = true,value = "EntityII")
+  private EntityIDto entityIDto;
+  @ApiModelProperty(required = true,value = "Description")
   private String description;
+  @ApiModelProperty(required = true,value = "Date")
   private Date date;
+  @ApiModelProperty(required = true,value = "Options")
   private Options options;
+  @ApiModelProperty(required = true,value = "Details of EntityII")
   private String details;
+  @ApiModelProperty(required = true,value = "User EntityII")
   private UserDto userDto;
 
   public Long getId() {
@@ -22,12 +32,12 @@ public class EntityIIDetailDto {
     this.id = id;
   }
 
-  public EntityIIDto getEntityIIDto() {
-    return entityIIDto;
+  public EntityIDto getEntityIDto() {
+    return entityIDto;
   }
 
-  public void setEntityIIDto(EntityIIDto entityIIDto) {
-    this.entityIIDto = entityIIDto;
+  public void setEntityIDto(EntityIDto entityIDto) {
+    this.entityIDto = entityIDto;
   }
 
   public String getDescription() {

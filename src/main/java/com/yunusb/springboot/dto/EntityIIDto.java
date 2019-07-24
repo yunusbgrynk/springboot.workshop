@@ -1,17 +1,27 @@
 package com.yunusb.springboot.dto;
 
 import com.yunusb.springboot.model.Options;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 
+@ApiModel(value = "EntityII DTO")
 public class EntityIIDto {
 
+  @ApiModelProperty(required = true,value = "ID")
   private Long id;
+  @ApiModelProperty(required = true,value = "Description")
   private String description;
+  @ApiModelProperty(required = true,value = "Details")
   private String details;
+  @ApiModelProperty(required = true,value = "Date")
   private Date date;
+  @ApiModelProperty(required = true,value = "Options")
   private Options options;
+  @ApiModelProperty(required = true,value = "User of EntityII")
   private UserDto userOfEntityII;
+  @ApiModelProperty(required = true,value = "EntityI")
   private EntityIDto entityIDto;
 
   public Long getId() {
