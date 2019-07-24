@@ -33,7 +33,6 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public UserDto getById(Long id) {
-
     return null;
   }
 
