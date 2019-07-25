@@ -19,7 +19,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    User user = userRepository.findByUsername(username);
+    /*
+    set index username to avoid loss of performance indexes = {@Index(name = "idx_username", columnList = "username")}
+     */
+    User user = userRepository.findByUsername(username); // query to database with user
     if(user == null){
       throw new UsernameNotFoundException("Invalid username");
     }
