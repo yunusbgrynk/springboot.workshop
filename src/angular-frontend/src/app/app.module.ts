@@ -5,18 +5,39 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {JwtInterceptor} from "./security/jwt-interceptor";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {ErrorInterceptor} from "./security/authentication.interceptor";
+import { LoginComponent } from './login/login.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import {MatIconModule} from "@angular/material";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import {ModalModule} from "ngx-bootstrap";
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import {DashboardModule} from "./pages/dashboard/dashboard.module";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    SidebarComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    CollapseModule.forRoot(),
+    ModalModule.forRoot(),
+    BrowserAnimationsModule,
+    DashboardModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
