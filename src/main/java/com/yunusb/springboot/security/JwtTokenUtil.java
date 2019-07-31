@@ -1,4 +1,4 @@
-package com.yunusb.springboot.security;
+/* package com.yunusb.springboot.security;
 
 import com.yunusb.springboot.model.User;
 import io.jsonwebtoken.Claims;
@@ -72,3 +72,4 @@ public class JwtTokenUtil {
   }
 
 }
+*/

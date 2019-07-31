@@ -1,4 +1,4 @@
-package com.yunusb.springboot.security;
+/* package com.yunusb.springboot.security;
 
 import com.yunusb.springboot.service.impl.UserDetailsServiceImpl;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -69,3 +69,4 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
   }
 
 }
+*/

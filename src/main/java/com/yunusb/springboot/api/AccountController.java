@@ -1,4 +1,4 @@
-package com.yunusb.springboot.api;
+/* package com.yunusb.springboot.api;
 
 import com.yunusb.springboot.security.JwtTokenUtil;
 import com.yunusb.springboot.service.impl.UserServiceImpl;
@@ -19,3 +19,4 @@ public class AccountController {
     this.userServiceImpl = userServiceImpl;
   }
 }
+*/

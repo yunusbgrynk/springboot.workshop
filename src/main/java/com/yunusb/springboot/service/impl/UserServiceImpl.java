@@ -1,4 +1,4 @@
-package com.yunusb.springboot.service.impl;
+/* package com.yunusb.springboot.service.impl;
 
 import com.yunusb.springboot.dto.UserDto;
 import com.yunusb.springboot.model.User;
@@ -48,3 +48,4 @@ public class UserServiceImpl implements UserService {
     return null;
   }
 }
+*/

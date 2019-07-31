@@ -1,4 +1,4 @@
-package com.yunusb.springboot.service.impl;
+/* package com.yunusb.springboot.service.impl;
 
 import com.yunusb.springboot.model.User;
 import com.yunusb.springboot.repository.UserRepository;
@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     /*
     set index username to avoid loss of performance indexes = {@Index(name = "idx_username", columnList = "username")}
      */
-    User user = userRepository.findByUsername(username); // query to database with user
+  /*  User user = userRepository.findByUsername(username); // query to database with user
     if(user == null){
       throw new UsernameNotFoundException("Invalid username");
     }
@@ -31,3 +31,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
   }
 
 }
+*/

@@ -1,4 +1,4 @@
-package com.yunusb.springboot.security;
+/* package com.yunusb.springboot.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -19,3 +19,4 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
 
   }
 }
+*/
