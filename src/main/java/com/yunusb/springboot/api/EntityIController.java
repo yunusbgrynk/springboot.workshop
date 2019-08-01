@@ -19,6 +19,7 @@ import javax.validation.Valid;
 @RequestMapping(ApiPaths.EntityI.BPA)
 @Slf4j
 @Api(value = ApiPaths.EntityI.BPA, description = "API of EntityI")
+@CrossOrigin
 public class EntityIController {
 
   private final EntityIServiceImpl entityIService;
