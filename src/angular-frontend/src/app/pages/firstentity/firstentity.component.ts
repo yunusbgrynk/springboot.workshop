@@ -12,6 +12,11 @@ export class FirstentityComponent implements OnInit {
 
   page = new Page();
   rows = new Array<FirstentityModel>();
+  cols = [
+    {prop:'id',name:'ID'},
+    {prop:'ent1name',name:'Entity-I Name',sortable:false},
+    {prop:'ent1code',name:'Entity-I Code',sortable:false}
+  ];
   constructor(private firstEntityService: FirstentityService) {
 
   }
