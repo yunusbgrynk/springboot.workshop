@@ -20,10 +20,10 @@ export class FirstentityComponent implements OnInit {
     this.setPage({ offset: 0 });
   }
   setPage(pageInfo) {
-    this.page.page = pageInfo.offset;
+    this.page.number = pageInfo.offset;
     this.firstEntityService.getAll(this.page).subscribe(pageData => {
       this.page.size = pageData.size;
-      this.page.page   = pageData.page;
+      this.page.number   = pageData.number;
       this.page.totalElements = pageData.totalElements;
       this.rows = pageData.content;
     });
