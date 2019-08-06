@@ -12,4 +12,8 @@ public final class ApiPaths {
     public static final String BPA = BASE_PATH+"/entity1";
   }
 
+  public static final class User{
+    public static final String BPA = BASE_PATH+"/users";
+  }
+
 }

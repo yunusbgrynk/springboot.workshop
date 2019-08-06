@@ -10,7 +10,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -57,7 +59,7 @@ public class EntityIServiceImpl implements EntityIService {
   }
 
   @Override
-  public List<EntityI> getByEnt1codeContains(String ent1code) {
+  public List<EntityIDto> getByEnt1codeContains(String ent1code) {
     return null;
   }
 
@@ -65,6 +67,14 @@ public class EntityIServiceImpl implements EntityIService {
   public Boolean delete(Long id) {
     entityIRepository.deleteById(id);
     return true;
+  }
+
+  @Override
+  public List<EntityIDto> findAll(Sort sort) {
+     List<EntityI> sortEntityI = entityIRepository.findAll(new Sort(Sort.Direction.ASC,"ent1name"));
+
+     return null;
+
   }
 
   @Override

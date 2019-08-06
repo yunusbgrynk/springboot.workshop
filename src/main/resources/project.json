@@ -1,0 +1,23 @@
+[
+  {
+    "_class": "com.yunusb.springboot.model.User",
+    "username" : "springdeveloper",
+    "firstName": "Java",
+    "lastName": "Springboot",
+    "email":"spring@java.com"
+  },
+  {
+    "_class": "com.yunusb.springboot.model.User",
+    "username" : "jr_blues",
+    "firstName": "Jimi",
+    "lastName": "Hendrix",
+    "email":"jimi@hendrix.com"
+  },
+  {
+    "_class": "com.yunusb.springboot.model.User",
+    "username" : "clapton",
+    "firstName": "Eric",
+    "lastName": "Clapton",
+    "email":"fender@strat.com"
+  }
+]

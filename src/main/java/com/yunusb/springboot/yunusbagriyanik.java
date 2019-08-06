@@ -5,6 +5,9 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.data.repository.init.Jackson2RepositoryPopulatorFactoryBean;
+import org.springframework.core.io.Resource;
 
 
 
@@ -22,6 +25,12 @@ public class yunusbagriyanik {
 		return modelMapper;
 	}
 
+		@Bean
+    public Jackson2RepositoryPopulatorFactoryBean repositoryPopulator() {
+        Jackson2RepositoryPopulatorFactoryBean factory = new Jackson2RepositoryPopulatorFactoryBean();
+        factory.setResources(new Resource[]{new ClassPathResource("project.json")});
+        return factory;
+    }
 
 
 }

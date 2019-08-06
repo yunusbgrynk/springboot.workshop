@@ -8,8 +8,10 @@ public class UserDto {
 
   @ApiModelProperty(required = true,value = "ID")
   private Long id;
-  @ApiModelProperty(required = true,value = "Name Surname")
-  private String nameSurname;
+  @ApiModelProperty(required = true,value = "First Name")
+  private String firstName;
+  @ApiModelProperty(required = true,value = "Last Name")
+  private String lastName;
   @ApiModelProperty(required = true,value = "Email")
   private String email;
 
@@ -21,12 +23,20 @@ public class UserDto {
     this.id = id;
   }
 
-  public String getNameSurname() {
-    return nameSurname;
+  public String getFirstName() {
+    return firstName;
   }
 
-  public void setNameSurname(String nameSurname) {
-    this.nameSurname = nameSurname;
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
   public String getEmail() {
